@@ -1,15 +1,5 @@
-pipeline {
-  agent {
-    node {
-      label 'build'
+node { 
+    stage('Stage 1') {
+        echo 'Hello World' 
     }
-    
-  }
-  stages {
-    stage('Build') {
-      steps {
-        echo 'Srinivas'
-      }
-    }
-  }
 }
