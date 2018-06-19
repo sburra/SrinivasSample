@@ -1,10 +1,6 @@
- node('windows') {
-        checkout scm
-        try {
-            unstash 'app'
-            bat 'make check'
-        }
-        finally {
-            junit '**/target/*.xml'
-        }
+node { 
+    checkout scm 
+    stage ('Build') { 
+        echo 'This is a minimal pipeline.' 
     }
+}
