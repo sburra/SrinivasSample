@@ -3,7 +3,7 @@ node {
         echo 'Building....'
     }
     stage('Test') {
-        echo 'Test....'
+        echo 'Testing....'
     }
     stage('Deploy') {
         echo 'Deploying....'
