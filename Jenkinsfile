@@ -1,11 +1,10 @@
-node {
-    stage('Build') {
-        echo 'Building....'
+ node('windows') {
+        checkout scm
+        try {
+            unstash 'app'
+            bat 'make check'
+        }
+        finally {
+            junit '**/target/*.xml'
+        }
     }
-    stage('Test') {
-        echo 'Testing....'
-    }
-    stage('Deploy') {
-        echo 'Deploying....'
-    }
-}
