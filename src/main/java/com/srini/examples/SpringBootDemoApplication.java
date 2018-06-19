@@ -16,9 +16,12 @@ public class SpringBootDemoApplication {
         String[] beanNames = ctx.getBeanDefinitionNames();
          
         Arrays.sort(beanNames);
+        System.out.println("=====================================Bean names started here===============");
          
         for (String beanName : beanNames)
         {
+        	
+        	
             System.out.println(beanName);
         }
     }
