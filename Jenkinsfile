@@ -1,12 +1,11 @@
-node { 
+node {
     stage('Build') {
-        sh 'make' 
+        echo 'Building....'
     }
     stage('Test') {
-        sh 'make check'
-        junit 'reports/**/*.xml' 
+        echo 'Building....'
     }
     stage('Deploy') {
-        sh 'make publish'
+        echo 'Deploying....'
     }
 }
